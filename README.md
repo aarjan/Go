@@ -7,4 +7,4 @@
 ##Most resources are from:
 ### https://www.github.com/ardanlabs/gotraining/
 ### https://www.gobyexample.com/
-### https://www.tour.golang.org/
+ https://www.tour.golang.org/
