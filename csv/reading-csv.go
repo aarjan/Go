@@ -12,7 +12,7 @@ import (
 func main() {
 
 	//Open the iris dataset file
-	file, err := os.Open("/home/aarzan/gocode/src/github.com/aarjan/data/iris.csv")
+	file, err := os.Open("/home/aarzan/gocode/src/github.com/aarjan/golang-training/data/iris.csv")
 
 	if err != nil {
 		log.Fatal(err)

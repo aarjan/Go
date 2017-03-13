@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/aarjan/counters"
-	"github.com/aarjan/users"
+	"github.com/aarjan/packaging-exporting/counters"
+	"github.com/aarjan/packaging-exporting/just"
+	"github.com/aarjan/packaging-exporting/users"
 )
 
 func main() {

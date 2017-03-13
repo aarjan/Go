@@ -1,5 +1,8 @@
 // Sample program to show how to use a MultiWriter to perform writes to
 // multiple devices with one write call.
+
+// Read first : https://github.com/ardanlabs/gotraining/tree/master/topics/packages/io
+
 package main
 
 import (
@@ -61,8 +64,6 @@ func main() {
 
 	// MultiWriter(io.Writer...) returns a single writer which multiplexes its
 	// writes across all of the writers we pass in.
-
-	fmt.Println(writers)
 	dest := io.MultiWriter(writers...)
 
 	// Write to dest the same way as before, copying from the Body.

@@ -20,6 +20,7 @@ func main() {
 	// SHA1 values are often printed in hex, for example in git commits. Use the %x format verb to convert a hash results to a hex string.
 	fmt.Println(s)
 	fmt.Printf("%x\n", bs)
+
 }
 
 // You can compute other hashes using a similar pattern to the one shown above. For example, to compute MD5 hashes import crypto/md5 and use md5.New().
