@@ -25,7 +25,6 @@ func main() {
 	//since we know the expected fields in the record
 	reader.FieldsPerRecord = 5
 
-	reader.TrailingComma
 	//rawCSVData would our successfully parsed rows
 	var rawCSVData [][]string
 

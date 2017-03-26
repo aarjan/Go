@@ -33,4 +33,16 @@ var routes = Routes{
 		"/todos/{id:[0-9]+}",
 		TodoShow,
 	},
+	Route{
+		"todoCreate",
+		"Post",
+		"/todos/create",
+		TodoCreate,
+	},
+	Route{
+		"todoDestroy",
+		"Get",
+		"/todos/destroy/{id}",
+		TodoDestroy,
+	},
 }
