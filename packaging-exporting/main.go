@@ -2,12 +2,13 @@ package main
 
 import (
 	"fmt"
-	"github.com/aarjan/packaging-exporting/counters"
-	"github.com/aarjan/packaging-exporting/just"
-	"github.com/aarjan/packaging-exporting/users"
+
+	"github.com/aarjan/golang-training/packaging-exporting/counters"
+	"github.com/aarjan/golang-training/packaging-exporting/users"
 )
 
 func main() {
+
 	//returns value of exported type
 	counter := counters.AlertCounter(23)
 	fmt.Println(counter)
