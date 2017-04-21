@@ -11,7 +11,7 @@ import (
 func main() {
 
 	// This tests whether a pattern matches a string.
-	match, _ := regexp.MatchString("p([a-z]+)ch", "peach")
+	match, _ := regexp.MatchString("p([a-z]+)ch", "peach is peach but pitch is not peach")
 	fmt.Println(match)
 
 	// Above we used a string pattern directly, but for other regexp tasks you’ll need to Compile an optimized Regexp struct.
@@ -20,8 +20,8 @@ func main() {
 	// Many methods are available on these structs. Here’s a match test like we saw earlier.
 	fmt.Println(r.MatchString("peach"))
 
-	// This finds the match for the regexp.
-	fmt.Println(r.FindString("peach punch"))
+	// This finds the first match for the regexp.
+	fmt.Println(r.FindString("punch peach"))
 
 	// This also finds the first match but returns the start and end indexes for the match instead of the matching text.
 	fmt.Println(r.FindStringIndex("peach punch"))
@@ -33,6 +33,7 @@ func main() {
 	fmt.Println(r.FindStringSubmatchIndex("peach punch"))
 
 	// The All variants of these functions apply to all matches in the input, not just the first. For example to find all matches for a regexp.
+	// A negative integer gives all the matches
 	fmt.Println(r.FindAllString("peach punch pinch", -1))
 
 	// These All variants are available for the other functions we saw above as well.

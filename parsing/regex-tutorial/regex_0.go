@@ -19,9 +19,9 @@ var regexpExpr []string = []string{
 
 	`\d`, // Represents any numeric digit
 
-	`\t`, // Represents any of the following whitespaces: TAB,SPACE,CR,LF. Or more precisely [\t\n\r\f]
+	`\t`, // Represents TAB, other whitespaces: SPACE,CR,LF. Or more precisely [\t\n\r\f]
 
-	`\S`, // Character classes can be negated by using the uppercase '\W','\D','\S'. Thus '\D' is any character that is not a '\d'
+	`\S`, // Matches any non-white character; Character classes can be negated by using the uppercase '\W','\D','\S'. Thus '\D' is any character that is not a '\d'
 
 	`\W`, // Checks if a string has anything that is not a word-char; eg: "hyphen" ;'-'
 
@@ -31,15 +31,14 @@ var regexpExpr []string = []string{
 
 	// It must be escaped twice in the regex and once in the string.
 
-	"\\.", // Finding a literal dot, or `\.`
+	`\.`, // Finding a literal dot, or `\.`
 
-	"\\$", // Finding a literal dollar symbol
+	`\$`, // Finding a literal dollar symbol
 }
 
 func main() {
 
 	fmt.Println("Strings to be  matched:", "\\ This is my 1st regular expression exercise.")
-	fmt.Println("\n")
 
 	for _, expr := range regexpExpr {
 		var err error
