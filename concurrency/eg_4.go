@@ -39,5 +39,11 @@ func main() {
 			fmt.Println(<-c)
 		}
 	}()
+
 	Walk(t1, c)
+
+	// Can't use this, because we don't know when the channel is closed
+	// for v := range ch {
+	// 	fmt.Println(v)
+	// }
 }

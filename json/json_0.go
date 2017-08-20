@@ -79,7 +79,8 @@ func main() {
 	fmt.Println(res)
 	fmt.Println(res.Fruits[0])
 
-	// In the examples above we always used bytes and strings as intermediates between the data and JSON representation on standard out. We can also stream JSON encodings directly to os.Writers like os.Stdout or even HTTP response bodies.
+	// In the examples above we always used bytes and strings as intermediates between the data and JSON representation on standard out.
+	// We can also stream JSON encodings directly to os.Writers like os.Stdout or even HTTP response bodies.
 	enc := json.NewEncoder(os.Stdout)
 	d := map[string]int{"apple": 5, "lettuce": 7}
 	enc.Encode(d)

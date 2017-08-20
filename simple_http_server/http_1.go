@@ -9,12 +9,12 @@ import (
 var tpl *template.Template
 
 func init() {
-	tpl = template.Must(template.ParseFiles("simple_http_server/public/templates/index.html"))
+	tpl = template.Must(template.ParseFiles("public/templates/index.html"))
 }
 
 func main() {
 	http.HandleFunc("/", dogs)
-	http.Handle("/resources/", http.StripPrefix("/resources", http.FileServer(http.Dir("simple_http_server/public"))))
+	http.Handle("/resources/", http.StripPrefix("/resources", http.FileServer(http.Dir("public"))))
 	http.ListenAndServe(":8080", nil)
 }
 
