@@ -5,6 +5,11 @@ import (
 	"sync"
 )
 
+/*
+	Generator generates the sequence till the range completes.
+	The loop is run in a separate goroutine, as we have passed the values to a unbuffered channel.
+	If we had run the loop in the same goroutine, there will be deadlock as the channel will get multiple send request.
+*/
 func generator(start, stop int) <-chan int {
 	c := make(chan int)
 	go func() {
