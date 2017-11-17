@@ -11,7 +11,7 @@ func boring(s string) <-chan string {
 	go func() {
 		for i := 0; ; i++ {
 			c <- fmt.Sprint(s, i)
-			time.Sleep(time.Duration(rand.Intn(3) * 1000))
+			time.Sleep(time.Duration(rand.Intn(3)) * time.Second)
 		}
 	}()
 	return c

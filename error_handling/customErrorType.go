@@ -5,7 +5,7 @@
 //in order to make a more informed error handling decisions. This is when custom error type make sense.
 
 //from net package
-package net
+package main
 
 type OpError struct {
 	//read or write operation

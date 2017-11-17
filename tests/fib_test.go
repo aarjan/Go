@@ -2,8 +2,6 @@ package fib
 
 import "testing"
 
-//import "fmt"
-
 type fibTest struct {
 	n        int
 	expected int
@@ -51,21 +49,21 @@ func TestFib3(t *testing.T) {
 		}
 	}
 }
-func BenchmarkFib10(b *testing.B) {
+func BenchmarkFib(b *testing.B) {
 	// run the Fib function b.N times
 	for n := 0; n <= b.N; n++ {
-		Fib(10)
+		Fib(30)
 	}
 }
 
-func BenchmarkFib210(b *testing.B) {
+func BenchmarkFib2(b *testing.B) {
 	for n := 0; n <= b.N; n++ {
-		Fib2(10)
+		Fib2(30)
 	}
 }
 
-func BenchmarkFib310(b *testing.B) {
+func BenchmarkFib3(b *testing.B) {
 	for n := 0; n <= b.N; n++ {
-		Fib3(10)
+		Fib3(30)
 	}
 }
